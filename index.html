@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pakistan 2026 — A 13-Day Expedition Through the Karakoram</title>
+<meta name="description" content="A small-group expedition through Northern Pakistan — Skardu, Fairy Meadows, Hunza Valley and Karakoram base camps. 27 Sep – 9 Oct 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAFAF7;
+    --bg-alt:#F1F0EA;
+    --ink:#16161B;
+    --ink-soft:#3B3B41;
+    --mute:#76767C;
+    --line:#E4E2D9;
+    --accent:#1E8E83;
+    --accent-soft:#E2F1EE;
+    --shadow:0 10px 40px -20px rgba(20,30,30,.25);
+    --r:14px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:400;letter-spacing:-.01em;margin:0}
+  h1{font-size:clamp(2.4rem,6vw,5rem);line-height:1.02}
+  h2{font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.1;margin-bottom:.6em}
+  h3{font-size:1.45rem;line-height:1.2}
+  h4{font-size:1.05rem;line-height:1.3;letter-spacing:.02em;text-transform:uppercase;font-family:'Inter',sans-serif;font-weight:500;color:var(--mute)}
+  p{margin:0 0 1em}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+  /* NAV */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,250,247,.78);
+    backdrop-filter:saturate(140%) blur(14px);
+    -webkit-backdrop-filter:saturate(140%) blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;height:64px;gap:24px}
+  .brand{font-family:'Fraunces',serif;font-size:1.15rem;letter-spacing:.02em;margin-right:auto}
+  .brand b{font-weight:500}
+  .nav-links{display:flex;gap:26px;font-size:.92rem;color:var(--ink-soft)}
+  .nav-links a{text-decoration:none;color:inherit;opacity:.85;transition:opacity .2s}
+  .nav-links a:hover{opacity:1;color:var(--accent)}
+  .nav-cta{padding:.55em 1.1em;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-size:.88rem;font-weight:500}
+  .nav-cta:hover{background:var(--accent)}
+  @media (max-width:760px){.nav-links{display:none}}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    min-height:88vh;
+    display:flex;align-items:flex-end;
+    color:#fff;
+    overflow:hidden;
+    isolation:isolate;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:-2;
+    background:url('img/hero.jpg') center/cover no-repeat;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.05) 40%,rgba(0,0,0,.65) 100%);
+  }
+  .hero-content{padding-bottom:64px;width:100%}
+  .hero-kicker{
+    display:inline-block;padding:.4em .9em;border:1px solid rgba(255,255,255,.55);
+    border-radius:999px;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;
+    margin-bottom:24px;backdrop-filter:blur(4px);background:rgba(255,255,255,.08)
+  }
+  .hero h1{max-width:14ch;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.25)}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:28px;margin-top:28px;font-size:.95rem;opacity:.92}
+  .hero-meta span{display:flex;align-items:center;gap:8px}
+  .hero-meta .dot{width:6px;height:6px;border-radius:50%;background:#fff;opacity:.7}
+
+  /* INTRO */
+  .intro{padding:110px 0 60px}
+  .intro p{font-family:'Fraunces',serif;font-size:clamp(1.3rem,2.2vw,1.75rem);line-height:1.4;color:var(--ink-soft);max-width:30ch}
+  .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}
+  .intro-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:36px}
+  .stat{border-top:1px solid var(--line);padding-top:18px}
+  .stat .num{font-family:'Fraunces',serif;font-size:2.4rem;line-height:1;color:var(--ink)}
+  .stat .lbl{font-size:.82rem;color:var(--mute);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+  @media (max-width:860px){
+    .intro{padding:64px 0 40px}
+    .intro-grid{grid-template-columns:1fr;gap:48px}
+  }
+
+  /* SECTION HEADER */
+  .section{padding:80px 0}
+  .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:48px;border-bottom:1px solid var(--line);padding-bottom:24px}
+  .section-head h2{margin:0;max-width:18ch}
+  .section-head .eyebrow{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:500;display:block;margin-bottom:14px}
+  .section-head .lead{max-width:36ch;color:var(--mute);font-size:.98rem}
+  @media (max-width:760px){
+    .section{padding:56px 0}
+    .section-head{flex-direction:column;align-items:flex-start;gap:14px}
+  }
+
+  /* ITINERARY */
+  .day{
+    display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+    padding:54px 0;
+    border-top:1px solid var(--line);
+  }
+  .day:first-of-type{border-top:none;padding-top:8px}
+  .day:nth-child(even) .day-media{order:2}
+  .day-meta{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+  .day-num{
+    font-family:'Fraunces',serif;font-size:3rem;line-height:1;color:var(--accent);
+    font-weight:500;
+  }
+  .day-date{
+    font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);
+    padding:.35em .8em;border:1px solid var(--line);border-radius:999px;background:#fff
+  }
+  .day h3{font-size:1.9rem;font-weight:500;margin-bottom:.5em;line-height:1.15}
+  .day p{color:var(--ink-soft);max-width:46ch}
+  .day-media{
+    position:relative;border-radius:var(--r);overflow:hidden;
+    aspect-ratio:4/5;background:var(--bg-alt);
+    box-shadow:var(--shadow);
+  }
+  .day-media img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
+  .day-media:hover img{transform:scale(1.03)}
+  .day-tag{position:absolute;top:16px;left:16px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);padding:.4em .8em;border-radius:999px;font-size:.76rem;letter-spacing:.06em;color:var(--ink)}
+  @media (max-width:860px){
+    .day{grid-template-columns:1fr;gap:24px;padding:36px 0}
+    .day:nth-child(even) .day-media{order:0}
+    .day-media{aspect-ratio:4/3}
+    .day h3{font-size:1.55rem}
+    .day-num{font-size:2.3rem}
+  }
+
+  /* PRICE */
+  .price-section{background:var(--bg-alt)}
+  .price-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:start}
+  .price-card{
+    background:#fff;border-radius:var(--r);padding:48px;
+    border:1px solid var(--line);
+  }
+  .price-tag{display:flex;align-items:baseline;gap:10px;margin-bottom:6px}
+  .price-tag .amt{font-family:'Fraunces',serif;font-size:3.4rem;line-height:1;font-weight:500}
+  .price-tag .cur{color:var(--mute);font-size:1.1rem}
+  .price-sub{color:var(--mute);font-size:.95rem;margin-bottom:32px}
+  .price-cta{display:inline-block;padding:.9em 1.6em;background:var(--ink);color:#fff;border-radius:999px;text-decoration:none;font-weight:500;font-size:.95rem;margin-top:6px;transition:background .2s}
+  .price-cta:hover{background:var(--accent)}
+  .price-deposit{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:18px;margin-top:24px;font-size:.92rem;color:var(--mute)}
+  .price-deposit b{color:var(--ink);font-weight:500}
+
+  .includes h4{margin-bottom:14px}
+  .inc-list{list-style:none;margin:0 0 32px;padding:0}
+  .inc-list li{padding:10px 0 10px 28px;border-bottom:1px solid var(--line);position:relative;color:var(--ink-soft);font-size:.95rem}
+  .inc-list li::before{
+    content:"";position:absolute;left:0;top:18px;width:14px;height:8px;
+    border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);
+    transform:rotate(-45deg);
+  }
+  .exc-list li::before{
+    border:none;background:var(--mute);width:12px;height:2px;top:21px;transform:none;
+  }
+  @media (max-width:860px){
+    .price-grid{grid-template-columns:1fr;gap:40px}
+    .price-card{padding:32px}
+    .price-tag .amt{font-size:2.6rem}
+  }
+
+  /* INFO COLUMNS (payment + cancellation) */
+  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .info-card{padding:36px;border:1px solid var(--line);border-radius:var(--r);background:#fff}
+  .info-card h3{margin-bottom:18px;font-size:1.4rem}
+  .info-card p{color:var(--ink-soft);font-size:.96rem}
+  .info-card p:last-child{margin-bottom:0}
+  .info-row{padding:14px 0;border-bottom:1px solid var(--line)}
+  .info-row:last-child{border-bottom:none}
+  .info-row b{display:block;color:var(--ink);font-weight:500;margin-bottom:4px;font-size:.95rem}
+  .info-row span{color:var(--mute);font-size:.92rem}
+  @media (max-width:760px){.info-grid{grid-template-columns:1fr;gap:24px}.info-card{padding:28px}}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+  .person{display:grid;grid-template-columns:160px 1fr;gap:24px;align-items:start}
+  .person-img{aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:var(--bg-alt)}
+  .person-img img{width:100%;height:100%;object-fit:cover}
+  .person h3{font-size:1.4rem;margin-bottom:4px}
+  .person .role{color:var(--accent);font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+  .person p{color:var(--ink-soft);font-size:.95rem}
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr;gap:40px}}
+  @media (max-width:500px){.person{grid-template-columns:1fr;gap:16px}.person-img{max-width:140px}}
+
+  /* CTA BANNER */
+  .cta{
+    position:relative;color:#fff;padding:120px 0;overflow:hidden;isolation:isolate;
+    text-align:center;
+  }
+  .cta::before{
+    content:"";position:absolute;inset:0;z-index:-2;
+    background:url('img/page5_img1_2420x3226.jpg') center 30%/cover no-repeat;
+  }
+  .cta::after{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.65) 100%);
+  }
+  .cta h2{font-size:clamp(2rem,4vw,3.4rem);color:#fff;max-width:18ch;margin:0 auto 16px}
+  .cta p{color:rgba(255,255,255,.85);max-width:48ch;margin:0 auto 36px;font-size:1.05rem}
+  .cta-btn{display:inline-block;padding:1.05em 2.2em;background:#fff;color:var(--ink);border-radius:999px;text-decoration:none;font-weight:500;font-size:.98rem;transition:transform .2s}
+  .cta-btn:hover{transform:translateY(-2px)}
+  .cta-socials{display:flex;justify-content:center;gap:22px;margin-top:36px}
+  .cta-socials a{color:rgba(255,255,255,.85);display:inline-flex;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.3);align-items:center;justify-content:center;transition:all .2s;text-decoration:none}
+  .cta-socials a:hover{color:#fff;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.6)}
+
+  /* FOOTER */
+  footer{padding:48px 0 40px;border-top:1px solid var(--line);background:var(--bg)}
+  .foot-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;font-size:.86rem;color:var(--mute)}
+  .foot-inner a{color:var(--ink-soft);text-decoration:none}
+  .foot-inner a:hover{color:var(--accent)}
+  .foot-links{display:flex;gap:18px;align-items:center}
+  .foot-links a{display:inline-flex;align-items:center;gap:6px}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand">Pakistan <b>2026</b></div>
+    <div class="nav-links">
+      <a href="#itinerary">Itinerary</a>
+      <a href="#price">Price</a>
+      <a href="#payment">Payment</a>
+      <a href="#about">About</a>
+    </div>
+    <a class="nav-cta" href="https://forms.gle/PEaH3eA7Sf6Yon6U6" target="_blank" rel="noopener">Sign up</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-content">
+    <span class="hero-kicker">27 Sep – 9 Oct · 2026</span>
+    <h1>A thirteen-day expedition through the Karakoram.</h1>
+    <div class="hero-meta">
+      <span>Islamabad → Skardu → Hunza</span>
+      <span class="dot"></span>
+      <span>Small group · shared rooms</span>
+      <span class="dot"></span>
+      <span>Led by Zuzanna &amp; Khalil</span>
+    </div>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap intro-grid">
+    <div>
+      <h4>The trip</h4>
+      <p>From the white domes of Faisal Mosque to the glaciers of Rakaposhi — a slow, scenic crossing of Northern Pakistan, designed for travellers, not climbers.</p>
+    </div>
+    <div class="intro-stats">
+      <div class="stat"><div class="num">13</div><div class="lbl">Days</div></div>
+      <div class="stat"><div class="num">5</div><div class="lbl">Major hikes</div></div>
+      <div class="stat"><div class="num">2049€</div><div class="lbl">All-in</div></div>
+      <div class="stat"><div class="num">∞</div><div class="lbl">Mountain views</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="itinerary" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Day by day</span>
+        <h2>The itinerary, in full.</h2>
+      </div>
+      <p class="lead">Each day balances driving, hiking and rest. Optional activities marked along the way for those who want more.</p>
+    </div>
+
+    <article class="day">
+      <div>
+        <div class="day-meta"><span class="day-num">01</span><span class="day-date">27.09 · Sat</span></div>
+        <h3>Islamabad — arrival &amp; Faisal Mosque</h3>
+        <p>Land in Islamabad before 10 AM. Our guides meet you at the airport and transfer you to the hotel for a light breakfast and a short rest. After lunch we exchange money, then visit the iconic Faisal Mosque — one of the largest in the world — before returning for dinner.</p>
+      </div>
+      <div class="day-media">
+        <span class="day-tag">Faisal Mosque</span>
+        <img src="img/page2_img0_2420x3226.jpg" alt="Faisal Mosque in Islamabad" loading="lazy">
+      </div>
+    </article>
+
+    <article class="day">
+      <div>
+        <div class="day-meta"><span class="day-num">02</span><span class="day-date">28.09 · Sun</span></div>
+        <h3>Skardu — flight north &amp; the Cold Desert</h3>
+        <p>An early flight north to Skardu — keep your phone ready, the views of Nanga Parbat from the plane are breathtaking. After a lakeside lunch we settle in for two nights, then head to the Cold Desert (2,226 m) for a jeep ride across the dunes at sunset. ATV rides and paragliding optional.</p>
+      </div>
+      <div class="day-media">
+        <span class="day-tag">Cold Desert</span>
+        <img src="img/page2_img1_1066x1600.jpg" alt="Cold Desert, Skardu" loading="lazy">
+      </div>
+    </article>
+
+    <article class="day">
+      <div>
+        <div class="day-meta"><span class="day-num">03</span><span class="day-date">29.09 · Mon</span></div>
+        <h3>Skardu — Masur Rock &amp; Kharpocho Fort</h3>
+        <p>A 30-minute jeep ride drops us at the trailhead for Masur Rock — challenging, but the panorama is unreal. (Photos on the rock itself are optional. It is scary.) After lunch and rest, we visit Kharpocho Fort above town, then dinner and an early night.</p>
+      </div>
+      <div class="day-media">
+        <span class="day-tag">Masur Rock</span>
+        <img src="img/page3_img0_1153x2048.jpg" alt="Masur Rock viewpoint above Skardu" loading="lazy">
+      </div>
+    </article>
+
+    <article class="day">
+      <div>
+        <div class="day-meta"><span class="day-num">04</span><span class="day-date">30.09 · Tue</span></div>
+        <h3>Fairy Meadows</h3>
+        <p>Depart Skardu around 5:30 AM, breakfast en route. A 4–5 hour drive, then two hours of one of the world&rsquo;s most thrilling off-road jeep routes. From the drop-off, we hike up to Fairy Meadows, stopping mid-way for lunch. Sunset over Nanga Parbat, dinner and a bonfire close out the day.</p>
+      </div>
+      <div class="day-media">
+        <span class="day-tag">Fairy Meadows</span>
+        <img src="img/page3_img1_960x1280.jpg" alt="Fairy Meadows sunset reflection" loading="lazy">
+      </div>
+    </article>
+
+    <article class="day">
+      <div>
+        <div class="day-meta"><span class="day-num">05</span><span class="day-date">01.10 · Wed</span></div>
+        <h3>Nanga Parbat Base Camp</h3>
+        <p>An 8–9 hour round trip including lunch at the base camp. The hike is long but only moderately challenging, with a few steeper sections. Views of Nanga Parbat the whole way up. Back at Fairy Meadows: a well-earned dinner and a warm cup of chai.</p>
+      </div>
+      <div class="day-media">
+        <span class="day-tag">Nanga Parbat</span>
+        <img src="img/page4_img0_960x1280.jpg" alt="Nanga Parbat peak" loading="lazy">
+      </div>
+    </article>
+
+    <article class="day">
+      <div>
+        <div class="day-meta"><span class="day-num">06</span><span class="day-date">02.10 · Thu</span></div>
+        <h3>Karimabad — recovery in Hunza</h3>
+        <p>Down to the jeep point, out to the main road, then a scenic drive to Karimabad. We stay in a resort framed by dramatic mountain views. The afternoon is for rest. Karimabad is known for its gemstones and jewellery — some of the best prices in the region, if you&rsquo;re curious.</p>
+      </div>
+      <div class="day-media">
+        <span class="day-tag">Karimabad</span>
+        <img src="img/page4_img1_2420x3226.jpg" alt="Hunza Valley from Karimabad" loading="lazy">
+      </div>
+    </article>
+
+    <article class="day">
+      <div>
+        <div class="day-meta"><span class="day-num">07</span><span class="day-date">03.10 · Fri</span></div>
+        <h3>Ultar Meadows</h3>
+        <p>A rewarding hike to Ultar Meadows — a viewpoint hemmed in by cliffs and glaciers. Steep in places but the top earns it. Back in Karimabad: a late lunch, an afternoon free for cafés or local handicraft shops, then a local dinner in the evening.</p>
+      </div>
+      <div class="day-media">
+        <span class="day-tag">Ultar Meadows</span>
+        <img src="img/page5_img0_960x716.jpg" alt="Ultar Meadows with grazing yaks" loading="lazy">
+      </div>
+    </article>
+
+    <article class="day">
+      <div>
+        <div class="day-meta"><span class="day-num">08</span><span class="day-date">04.10 · Sat</span></div>
+        <h3>Eagle&rsquo;s Nest</h3>
+        <p>Slow morning at the resort, then check out around midday. After lunch, we move toward Eagle&rsquo;s Nest — bus or optional hike, your call. We all meet at the viewpoint for sunset over Hunza Valley, dinner and a bonfire to close the night.</p>
+      </div>
+      <div class="day-media">
+        <span class="day-tag">Eagle&rsquo;s Nest</span>
+        <img src="img/page5_img1_2420x3226.jpg" alt="Sunset over Hunza Valley from Eagle's Nest" loading="lazy">
+      </div>
+    </article>
+
+    <article class="day">
+      <div>
+        <div class="day-meta"><span class="day-num">09</span><span class="day-date">05.10 · Sun</span></div>
+        <h3>Hapakun Camp</h3>
+        <p>Early check-out, drive to Minapin village for lunch, then the climb to Hapakun Camp — through forest and open mountain views. We arrive late afternoon, settle in, and have dinner in the quiet of the high camp.</p>
+      </div>
+      <div class="day-media">
+        <span class="day-tag">Hapakun Camp</span>
+        <img src="img/page6_img0_2420x3226.jpg" alt="Morning view from a tent at Hapakun Camp" loading="lazy">
+      </div>
+    </article>
+
+    <article class="day">
+      <div>
+        <div class="day-meta"><span class="day-num">10</span><span class="day-date">06.10 · Mon</span></div>
+        <h3>Rakaposhi Base Camp</h3>
+        <p>Many say this is the best view of the trip: the Rakaposhi Glacier in full. After the hike and lunch in Minapin, we drive to the homestay in Ghulkin — the rest of the afternoon is free for cards, conversation, or doing nothing at all. Dinner at the homestay.</p>
+      </div>
+      <div class="day-media">
+        <span class="day-tag">Rakaposhi</span>
+        <img src="img/page6_img1_2420x3226.jpg" alt="Group resting near Rakaposhi Glacier" loading="lazy">
+      </div>
+    </article>
+
+    <article class="day">
+      <div>
+        <div class="day-meta"><span class="day-num">11</span><span class="day-date">07.10 · Tue</span></div>
+        <h3>Baskochi Meadows &amp; Passu Cones</h3>
+        <p>A steep, rewarding hike with views over Attabad Lake. Lunch, then onward to the iconic Passu Cones. The afternoon is for the famous suspension bridge and slow exploration of one of Hunza&rsquo;s most dramatic landscapes. Dinner back at the homestay.</p>
+      </div>
+      <div class="day-media">
+        <span class="day-tag">Passu Cones</span>
+        <img src="img/page7_img0_2324x3100.jpg" alt="Suspension bridge near the Passu Cones" loading="lazy">
+      </div>
+    </article>
+
+    <article class="day">
+      <div>
+        <div class="day-meta"><span class="day-num">12</span><span class="day-date">08.10 · Wed</span></div>
+        <h3>Lake Attabad</h3>
+        <p>A boat ride across the turquoise waters of Attabad Lake — formed by a 2010 landslide and now one of the region&rsquo;s most photographed places. After lunch, the long but scenic drive back to Skardu, arriving in the evening for dinner.</p>
+      </div>
+      <div class="day-media">
+        <span class="day-tag">Attabad Lake</span>
+        <img src="img/page7_img1_2420x3226.jpg" alt="Attabad Lake from above" loading="lazy">
+      </div>
+    </article>
+
+    <article class="day">
+      <div>
+        <div class="day-meta"><span class="day-num">13</span><span class="day-date">09.10 · Thu</span></div>
+        <h3>Islamabad — farewell</h3>
+        <p>Flight from Skardu to Islamabad with one final look at the mountains from above. This is where we part ways. We don&rsquo;t recommend booking an early-afternoon departure — domestic flights are known to shift schedules — but an evening international flight or an extra night in Islamabad both work.</p>
+      </div>
+      <div class="day-media">
+        <span class="day-tag">Islamabad</span>
+        <img src="img/page8_img0_2420x3188.jpg" alt="Architectural detail in Islamabad" loading="lazy">
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="price" class="section price-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Trip cost</span>
+        <h2>One price. Everything on-the-ground covered.</h2>
+      </div>
+      <p class="lead">Spots are limited by group size and accommodation. Only a paid deposit secures a place.</p>
+    </div>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-tag"><span class="amt">2 049</span><span class="cur">EUR</span></div>
+        <div class="price-sub">per participant · shared room (2 per room)</div>
+        <a href="https://forms.gle/PEaH3eA7Sf6Yon6U6" target="_blank" rel="noopener" class="price-cta">Sign up</a>
+        <div class="price-deposit">
+          <span><b>Deposit</b> 699 EUR · non-refundable</span>
+          <span>Final balance by <b>15 Jul 2026</b></span>
+        </div>
+      </div>
+
+      <div class="includes">
+        <h4>What&rsquo;s included</h4>
+        <ul class="inc-list">
+          <li>Airport pick-up in Islamabad &amp; all in-country transport</li>
+          <li>Domestic flights to and from Skardu</li>
+          <li>All ground transport and bus transfers</li>
+          <li>Three meals a day — breakfast, lunch, dinner</li>
+          <li>One large bottle of water per day</li>
+          <li>All accommodation (except the night back in Islamabad)</li>
+          <li>Entrance fees to all listed attractions</li>
+          <li>Jeep safari on the Cold Desert</li>
+          <li>Experienced expedition leader throughout</li>
+        </ul>
+        <h4>Not included</h4>
+        <ul class="inc-list exc-list">
+          <li>Personal travel insurance</li>
+          <li>Tourist visa (if applicable)</li>
+          <li>International flights to/from Islamabad</li>
+          <li>Additional water or snacks for hikes (~3–5 EUR/day)</li>
+          <li>Optional activities on the Cold Desert (ATVs, paragliding)</li>
+          <li>Personal equipment</li>
+          <li>Personal expenses — laundry, calls, alcohol, excess baggage</li>
+          <li>Costs from unforeseen events: weather, landslides, road conditions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="payment" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Booking</span>
+        <h2>Payment &amp; cancellation.</h2>
+      </div>
+      <p class="lead">Flexible installments are welcome — the deposit secures your seat.</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Payment options</h3>
+        <p>A <b>699 EUR deposit</b> secures a spot. Pay by bank transfer within one week of signing up — instructions arrive in the sign-up confirmation email.</p>
+        <p>The remaining balance can be paid flexibly in installments. <b>Final payment is due 15 July 2026.</b></p>
+      </div>
+      <div class="info-card">
+        <h3>Cancellation policy</h3>
+        <div class="info-row">
+          <b>Deposit</b>
+          <span>699 EUR · non-refundable, unless you or we find a replacement.</span>
+        </div>
+        <div class="info-row">
+          <b>More than 60 days before</b>
+          <span>Only the deposit is lost. Any further payments are refunded in full.</span>
+        </div>
+        <div class="info-row">
+          <b>Less than 60 days before</b>
+          <span>The full trip cost is non-refundable — unless a replacement is found.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Who you&rsquo;ll travel with</span>
+        <h2>About us.</h2>
+      </div>
+      <p class="lead">A Polish traveller who fell in love with Hunza, and a local guide who grew up between its peaks.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="person">
+        <div class="person-img"><img src="img/page12_img0_908x1210.jpg" alt="Zuzanna Forell" loading="lazy"></div>
+        <div>
+          <h3>Zuzanna Forell</h3>
+          <div class="role">Organiser · Pre-trip lead</div>
+          <p>A Polish traveller and digital nomad who&rsquo;s explored more than 60 countries — but Pakistan is the place she fell for hardest. She openly admits she&rsquo;s not the most experienced hiker, which is exactly why she believes anyone with basic fitness can complete this trip. Handles all pre-trip coordination, communication and planning so you arrive prepared.</p>
+        </div>
+      </div>
+
+      <div class="person">
+        <div class="person-img"><img src="img/page12_img1_512x640.jpg" alt="Khalil — local guide" loading="lazy"></div>
+        <div>
+          <h3>Khalil</h3>
+          <div class="role">Local guide · On-ground lead</div>
+          <p>A proud native of Hunza Valley and a professional tour guide with over four years leading expeditions in northern Pakistan. He knows every trail, viewpoint, shortcut and story — and is known for moving up the hills faster than the wind. Calm, friendly, deeply local: the backbone of the on-ground team.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="signup" class="cta">
+  <div class="wrap">
+    <h2>13 days. Limited spots. Sign-ups open February 2026.</h2>
+    <p>Express interest via the dedicated Google Form. Only the payment of a 699 EUR deposit confirms a place — spots are limited by group size and accommodation.</p>
+    <a href="https://forms.gle/PEaH3eA7Sf6Yon6U6" target="_blank" rel="noopener" class="cta-btn">Open the sign-up form</a>
+    <div class="cta-socials">
+      <a href="https://instagram.com/zuzannaforell" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://tiktok.com/@zuzanna.forell" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19.6 6.6a5.5 5.5 0 0 1-3.6-1.3 5.5 5.5 0 0 1-1.8-2.8h-3v13.1a2.6 2.6 0 1 1-2.6-2.6c.3 0 .6 0 .8.1V10a5.7 5.7 0 0 0-.8-.1 5.6 5.6 0 1 0 5.6 5.6V9.7a8.5 8.5 0 0 0 5.4 1.9V8.6c-.1 0-.1 0 0 0Z"/></svg>
+      </a>
+      <a href="https://youtube.com/@zuzannaforell" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.8 15.5v-7l5.8 3.5-5.8 3.5Z"/></svg>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=48601939930" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.5 3.5A10.4 10.4 0 0 0 3.5 16l-1.4 5 5.1-1.3a10.4 10.4 0 0 0 5 1.3h.1A10.4 10.4 0 0 0 20.5 3.5ZM12.3 19.1h-.1a8.6 8.6 0 0 1-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3a8.6 8.6 0 1 1 7.2 3.8Zm4.8-6.5c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.8 1c-.2.2-.3.2-.5.1a7 7 0 0 1-2-1.2 7.7 7.7 0 0 1-1.5-1.8c-.1-.3 0-.4.1-.5l.4-.5.3-.4c.1-.2 0-.3 0-.4l-.8-2c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4 12 12 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>© 2026 · Pakistan Expedition · Organised by Zuzanna Forell</div>
+    <div class="foot-links">
+      <a href="https://instagram.com/zuzannaforell" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://tiktok.com/@zuzanna.forell" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://youtube.com/@zuzannaforell" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://api.whatsapp.com/send?phone=48601939930" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://drive.google.com/file/d/1shy0zNYnGNTy2ZpD41cLKjeE0u2mhmpN/view?usp=sharing" target="_blank" rel="noopener">Full PDF</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
